@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Pembelajaran Bahasa Inggris Interaktif</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #388E3C;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 1rem;
+            display: inline-block;
+        }
+        
+        nav a:hover {
+            background-color: #2E7D32;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .dashboard {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .welcome {
+            grid-column: 1 / span 2;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: #388E3C;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+            
+            .welcome {
+                grid-column: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Media Pembelajaran Bahasa Inggris Interaktif</h1>
+    </header>
+    
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Kosakata</a>
+        <a href="#">Tata Bahasa</a>
+        <a href="#">Latihan</a>
+        <a href="#">Quiz</a>
+    </nav>
+    
+    <div class="container">
+        <div class="dashboard">
+            <div class="card">
+                <h2>Kategori Kosakata</h2>
+                <ul>
+                    <li>Hewan</li>
+                    <li>Makanan</li>
+                    <li>Profesi</li>
+                    <li>Keluarga</li>
+                    <li>Transportasi</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h2>Progress Belajar</h2>
+                <p>75% selesai</p>
+                <p>Skor: 250</p>
+                <p>Level: Intermediate</p>
+            </div>
+            
+            <div class="card welcome">
+                <h2>SELAMAT DATANG!</h2>
+                <p>Tingkatkan kemampuan Bahasa Inggris Anda dengan metode pembelajaran interaktif.</p>
+                <button class="btn">Mulai Belajar Sekarang</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2023 Media Pembelajaran Interaktif Bahasa Inggris</p>
+    </footer>
+
+    <script>
+        // Fungsi dasar untuk navigasi
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Modul ' + this.textContent + ' akan segera dibuka');
+            });
+        });
+        
+        // Tombol mulai belajar
+        document.querySelector('.btn').addEventListener('click', function() {
+            alert('Membuka modul pembelajaran pertama');
+        });
+    </script>
+</body>
+</html>
